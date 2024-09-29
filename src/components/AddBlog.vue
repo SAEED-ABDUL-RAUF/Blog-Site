@@ -41,7 +41,7 @@ const submitForm = async () => {
 
 <template>
   <Navbar />
-  <form @submit.prevent="submitForm" class="font-poppins text-black text-xl text-justify mx-60">
+  <form @submit.prevent="submitForm" class="font-poppins text-black text-xl text-justify mx-3 sm:mx-20 lg:max-2xl:mx-32">
     <input type="text" class="block mt-9 border border-neutral-400 bg-slate-100 w-4/5 mx-auto p-2 outline-none focus:border-sky-950" placeholder="Blog title" v-model="form.title">
     <textarea class="border border-neutral-400 bg-neutral-50 w-4/5 h-60 block mx-auto mt-3 p-2 resize-none outline-none focus:border-sky-950" placeholder="Type your blog here" v-model="form.body"></textarea>
     <button class="bg-sky-800 rounded py-2 px-4 block m-auto mt-5 text-white focus:border-gray-400" :disabled="isdisable" :class="{ 'cursor-not-allowed bg-sky-400': isdisable }">Post</button>

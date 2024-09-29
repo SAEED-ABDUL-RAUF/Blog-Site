@@ -1,6 +1,6 @@
 <script setup>
-import axios from 'axios';
-import { reactive,onMounted } from 'vue';
+  import axios from 'axios';
+  import { reactive,onMounted } from 'vue';
   import { RouterLink, useRoute } from 'vue-router';
   
   const blog = reactive({
@@ -28,7 +28,7 @@ import { reactive,onMounted } from 'vue';
 </script>
 
 <template>
-      <p v-if="blog.isLoading">loading....</p>
+      <p v-if="blog.isLoading" class="p-2 mt-2 mx-2 text-justify sm:mx-40 lg:max-2xl:mx-60">loading....</p>
       <div v-else class="p-2 mt-2 mx-2">
          <h1 class="capitalize font-semibold font-poppins text-2xl">{{ blog.post.title }}</h1>
          <p>{{ blog.post.body }}</p>
