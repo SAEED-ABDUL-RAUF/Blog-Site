@@ -15,11 +15,12 @@ import { reactive,onMounted } from 'vue';
     try {
       const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${blogId}`)
       blog.post = response.data
-      blog.isLoading = false
       console.log(blog.post)
     } catch (error) {
       console.log(error)
-      
+    
+    } finally {
+      blog.isLoading = false
     }
   })
 
