@@ -29,7 +29,7 @@
 
 <template>
       <p v-if="blog.isLoading" class="p-2 mt-2 mx-2 text-justify sm:mx-40 lg:max-2xl:mx-60">loading....</p>
-      <div v-else class="p-2 mt-2 mx-2">
+      <div v-else class="p-2 mt-2 mx-2 sm:mx-40 lg:max-2xl:mx-60">
          <h1 class="capitalize font-semibold font-poppins text-2xl">{{ blog.post.title }}</h1>
          <p>{{ blog.post.body }}</p>
       </div>
