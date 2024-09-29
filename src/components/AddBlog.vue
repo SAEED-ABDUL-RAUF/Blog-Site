@@ -17,9 +17,16 @@ const isdisable = ref(false)
 const submitForm = async () => {
   isdisable.value = true
   try {
+    
+    if (form.title == '' && form.body == '') throw 'Fields can\'t be empty'
+    if (form.title == '') throw 'Title can\'t be empty'
+    if (form.body == '') throw 'Form can\'t be empty'
+    
     const response = await axios.post('https://jsonplaceholder.typicode.com/posts', {title : form.title, body : form.body})
     const blogId = response.data.id
     // alert('sucessful')
+    
+
     form.title = '',
     form.body = ''
     setTimeout(() => {
@@ -30,8 +37,8 @@ const submitForm = async () => {
     router.push(`/posts/${blogId}`)
 
   } catch (error) {
-    console.log(error)
-    alert('Your post wasn\'t successful')
+    alert(error)
+    // alert('Your post wasn\'t successful')
   } finally{
     isdisable.value = false
   }
