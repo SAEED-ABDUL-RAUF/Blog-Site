@@ -21,7 +21,7 @@ const submitForm = async () => {
     if (form.title == '' && form.body == '') throw 'Fields can\'t be empty'
     if (form.title == '') throw 'Title can\'t be empty'
     if (form.body == '') throw 'Form can\'t be empty'
-    
+
     const response = await axios.post('https://jsonplaceholder.typicode.com/posts', {title : form.title, body : form.body})
     const blogId = response.data.id
     // alert('sucessful')
@@ -30,7 +30,7 @@ const submitForm = async () => {
     form.title = '',
     form.body = ''
     setTimeout(() => {
-      alert('Your post was successful')
+      alert('Your post was successful') 
     }, 100);
 
 
