@@ -10,6 +10,5 @@ function addNumber() {
 
 <template>
     <Navbar />
-    <!-- <p class="text-center text-2xl">{{ num }}</p> -->
     <About />
 </template>
